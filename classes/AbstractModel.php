@@ -9,13 +9,13 @@ abstract class AbstractModel
     public static function getAll()
     {
         $db = new DB();
-        return $db->queryAll('SELECT * FROM ' . static::$table , static::$class);
+        return $db->queryAll('SELECT * FROM ' . static::$table . ' ORDER BY ' . static::$table . '_date DESC' , static::$class);
     }
 
     public static function getOne($id)
     {
         $db = new DB();
-        $sql = 'SELECT * FROM '. static::$table .' WHERE news_id='. $id;
+        $sql = 'SELECT * FROM '. static::$table .' WHERE ' . static::$table . '_id='. $id;
         return $db->queryAll($sql, static::$class);
     }
 

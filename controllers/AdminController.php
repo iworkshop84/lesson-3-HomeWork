@@ -18,13 +18,14 @@ class AdminController
             }
 
             if(isset($post->news_name) && isset($post->news_content)){
-                $post->insertOne();
-
+                $post->newsAdd();
                 header('Location: /index.php');
                 exit;
             }
         }
 
-        require __DIR__ . '/../views/news/add.php';
+        //require __DIR__ . '/../views/news/add.php';
+        $view = new View();
+        $view->display('add.php');
     }
 }

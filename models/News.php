@@ -12,7 +12,7 @@ class News
     protected static $table = 'news';
     protected static $class = 'News';
 
-    public function insertOne()
+    public function newsAdd()
     {
         $db = new DB();
         $sql = "INSERT INTO ". static::$table ." (`news_name`, `news_content`, `news_date`)
