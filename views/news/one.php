@@ -28,7 +28,7 @@
             <div class="widgetcont">
 
                 <p><a href="/index.php">Главная</a></p>
-                <p><a href="/index.php?ctrl=Admin&act=Add">Добавить новость</a></p>
+                <p><a href="/Admin/Add">Добавить новость</a></p>
 
             </div>
         </div>

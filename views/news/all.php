@@ -17,7 +17,7 @@
 
 
         <?php foreach ($items as $item): ?>
-            <h3><a href="<?= '/index.php?ctrl=News&act=One&id=' . $item->news_id?>"><?= $item->news_name ?></a></h3>
+            <h3><a href="<?= '/News/One/' . $item->news_id?>"><?= $item->news_name ?></a></h3>
             <b>Дата публикации: <?=  date("d-m-Y H:i:s",strtotime($item->news_date)); ?></b>
             <p><?= $item->news_content ?></p>
         <?php endforeach; ?>
@@ -31,7 +31,7 @@
             <div class="widgetcont">
 
                 <p><a href="/index.php">Главная</a></p>
-                <p><a href="/index.php?ctrl=Admin&act=Add">Добавить новость</a></p>
+                <p><a href="/Admin/Add">Добавить новость</a></p>
 
             </div>
         </div>
