@@ -11,3 +11,4 @@ $controllerClassName = $ctrl . 'Controller';
 $controller = new $controllerClassName;
 $method = 'action' . $act;
 $controller->$method();
+

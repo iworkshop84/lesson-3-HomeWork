@@ -29,4 +29,14 @@ class DB{
         return $this->queryAll($sql, $class_name)[0];
     }
 
+    public function queryIns($sql)
+    {
+        $res = $this->mysqli->query($sql);
+        if(false === $res)
+        {
+            return false;
+        }
+        return $res;
+    }
+
 }

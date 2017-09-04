@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/views/news/style.css" type="text/css" media="screen" />
 
-    <title>Главная страница</title>
+    <title>Добавить новость</title>
 </head>
 <body>
 
@@ -13,16 +13,17 @@
         <div class="logo"><a href="/"></a>
         </div></div>
     <div id="posts">
-        <h2>Главная страница</h2>
+        <h2>Добавить новость</h2>
 
 
 
-        <?php foreach ($items as $item): ?>
-            <h3><a href="<?= '/index.php?ctrl=News&act=One&id=' . $item->news_id?>"><?= $item->news_name ?></a></h3>
-            <b>Дата публикации: <?=  date("d-m-Y H:i:s",strtotime($item->news_date)); ?></b>
-            <p><?= $item->news_content ?></p>
-        <?php endforeach; ?>
-
+        <form action="/index.php?ctrl=Admin&act=Add" method="post" enctype="multipart/form-data">
+            <p> <label for="name"> Имя новости: </label>
+                <input type="text" id="name" name="name"></p>
+            <p> <label for="content"> Текст новости: </label></p>
+            <p><textarea name="content" id="content" style="width: 700px; height: 400px;"></textarea></p>
+            <p> <button type="submit" name="addnews">Отправить</button></p>
+        </form>
 
 
     </div>
