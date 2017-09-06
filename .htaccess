@@ -3,10 +3,7 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule .*\.(jpg|gif|png|css|zip|doc|php|js)$ - [L]
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_FILENAME} !-f
-
+RewriteRule .*\.(jpg|gif|png|css|zip|doc|js)$ - [L]
 RewriteRule ^(.*)/(.*)/(.*)$ index.php?ctrl=$1&act=$2&id=$3 [L]
 RewriteRule ^(.*)/(.*)$ index.php?ctrl=$1&act=$2 [L]
 

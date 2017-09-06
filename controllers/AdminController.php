@@ -24,7 +24,7 @@ class AdminController
             }
         }
 
-        //require __DIR__ . '/../views/news/add.php';
+
         $view = new View();
         $view->display('add.php');
     }
