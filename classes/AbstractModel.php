@@ -2,6 +2,7 @@
 
 
 abstract class AbstractModel
+    implements IModel
 {
     protected static $table;
     protected static $class;
@@ -16,7 +17,7 @@ abstract class AbstractModel
     {
         $db = new DB();
         $sql = 'SELECT * FROM '. static::$table .' WHERE ' . static::$table . '_id='. $id;
-        return $db->queryAll($sql, static::$class);
+        return $db->queryOne($sql, static::$class);
     }
 
 }

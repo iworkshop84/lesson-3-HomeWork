@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/views/news/style.css" type="text/css" media="screen" />
 
-    <title><?= $item[0]->news_name ?></title>
+    <title><?= $items->news_name ?></title>
 </head>
 <body>
 
@@ -15,9 +15,9 @@
     <div id="posts">
 
 
-        <h1><?= $item[0]->news_name ?></h1>
-        <p><b>Дата публикации: <?=  date("d-m-Y H:i:s",strtotime($item[0]->news_date)); ?></b></p>
-        <div><?= $item[0]->news_content ?></div>
+        <h1><?= $items->news_name ?></h1>
+        <p><b>Дата публикации: <?=  date("d-m-Y H:i:s",strtotime($items->news_date)); ?></b></p>
+        <div><?= $items->news_content ?></div>
 
 
 
