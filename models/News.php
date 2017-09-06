@@ -3,6 +3,7 @@
 
 class News
     extends AbstractModel
+
 {
     public $news_id;
     public $news_name;
@@ -20,6 +21,7 @@ class News
          ('". $this->news_name ."', '". $this->news_content ."', NOW())";
         return $db->queryIns($sql);
     }
+
 
 
 }

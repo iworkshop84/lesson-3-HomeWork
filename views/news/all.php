@@ -16,7 +16,6 @@
         <h2>Главная страница</h2>
 
 
-
         <?php foreach ($items as $item): ?>
             <h3><a href="<?= '/News/One/' . $item->news_id?>"><?= $item->news_name ?></a></h3>
             <b>Дата публикации: <?=  date("d-m-Y H:i:s",strtotime($item->news_date)); ?></b>

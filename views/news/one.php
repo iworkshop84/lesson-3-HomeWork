@@ -14,7 +14,6 @@
         </div></div>
     <div id="posts">
 
-
         <h1><?= $items->news_name ?></h1>
         <p><b>Дата публикации: <?=  date("d-m-Y H:i:s",strtotime($items->news_date)); ?></b></p>
         <div><?= $items->news_content ?></div>

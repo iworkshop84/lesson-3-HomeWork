@@ -2,18 +2,13 @@
 
 
 class View
+    implements Iterator
 
 {
 
-    protected $data = [];
+    private $data = [];
 
-    // Убрать
-    public function assign($name, $value)
-    {
-        $this->data[$name] = $value;
-    }
-
-    public function render($url)
+      public function render($url)
     {
         foreach ($this->data as $key => $val) {
             $$key = $val;
@@ -39,5 +34,42 @@ class View
     public function __get($k)
     {
         return $this->data[$k];
+    }
+
+
+
+// Итератор для работы с объектом как с массивом
+    public function current()
+    {
+        $data = current($this->data);
+        return $data;
+    }
+
+
+    public function next()
+    {
+        $data = next($this->data);
+        return $data;
+    }
+
+
+    public function key()
+    {
+        $data = key($this->data);
+        return $data;
+    }
+
+
+    public function valid()
+    {
+        $key = key($this->data);
+        $data = ($key !== NULL && $key !== FALSE);
+        return $data;
+    }
+
+
+    public function rewind()
+    {
+        reset($this->data);
     }
 }

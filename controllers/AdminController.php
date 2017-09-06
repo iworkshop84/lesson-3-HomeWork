@@ -26,6 +26,6 @@ class AdminController
 
 
         $view = new View();
-        $view->display('add.php');
+        $view->display('news/add.php');
     }
 }
